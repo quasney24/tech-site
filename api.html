@@ -20,7 +20,6 @@
 
     <!-- Custom styles for this template -->
     <link href="css/landing-page.min.css" rel="stylesheet">
-
   </head>
 
   <body>
@@ -40,38 +39,79 @@
           <div class="col-xl-12 showcase-img">
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                    <h1 class="display-4">New Idea's are Brewing People!</h1>
-                        <p class="lead">Starting off with some API fun!</p>
+                    <h1 class="display-4">API Fun!</h1>
+                        <p class="lead">This page has functionality on how you can use API to visualize your page! Starting with Open Weather API.</p>
                 </div>
             </div>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            <!-- Commenting out sign up form  
-            <form>
+            <h1>Weather Forecast</h1>  
+          </div>    
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+             
+            <form id="name-form">
               <div class="form-row">
                 <div class="col-12 col-md-9 mb-2 mb-md-0">
-                  <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+                  <input type="email" class="form-control form-control-lg" placeholder="Enter a City..." id="name-input">
                 </div>
                 <div class="col-12 col-md-3">
-                  <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+                  <button type="submit" class="btn btn-block btn-lg btn-primary" id="find-name">Enter!</button>
                 </div>
               </div>
-            </form>-->
+            </form>
           </div>
         </div>
       </div>
     </header>
+      <div class="container">
+        <div class="row" style="padding-top:3%;">
+            <div class="col-md-1"></div>
+            <div class="col-md-2 mx-auto" style="border-style:groove;border-radius:10px; box-shadow:0px 5px 5px 0px #adb5bd">
+                    <p><img src="therm.svg" style="height:100px;display:block;margin-left:auto; margin-right:auto;" class="mx-auto"><b ></b></p>
+                    <h5 style="text-align:center"><b id="temp"></b></h5>
+            
+            </div>
+            <div class="col-md-2 mx-auto" style="border-style:groove;border-radius:10px; box-shadow:0px 5px 5px 0px #adb5bd">
+                    <p><img src="pressure.svg" style="height:100px;display:block;margin-left:auto; margin-right:auto;" class="mx-auto"><b ></b></p>
+                    <h5 style="text-align:center"><b id="pressure"></b></h5>
+            </div>
+            <div class="col-md-2 mx-auto" style="border-style:groove;border-radius:10px; box-shadow:0px 5px 5px 0px #adb5bd">
+                    <p><img src="humid.svg" style="height:100px;display:block;margin-left:auto; margin-right:auto;" class="mx-auto"><b ></b></p>
+                        <h5 style="text-align:center"><b id="humid"></b></h5>
+            
+            </div>
+            <div class="col-md-1 mx-auto">
+            
+            </div>
 
+      
+      
+        </div>
+      </div>      
+      <!--Your Giphy for the current Weather-->
+      <div class="container">
+          <div class="row">
+              <div class="col-12" style="margin-top:3%;">
+              <h4 style="text-align:center;"><i>Your Personal Gif based on your local Weather!</i></h4>
+              </div>  
+          </div>
+         <div class="row">
+            <div class="col-12 mx-auto">
+                <div class="gifgoeshere" style="text-align:center;border-style:groove;border-radius:5px; box-shadow:0px 5px 5px 0px #adb5bd"></div>
+             
+            </div>
+          
+          </div>
+      
+      </div>
     <!-- Icons Grid -->
-    <section class="features-icons bg-light text-center" style="margin-bottom:3%">
+   <!-- <section class="features-icons bg-light text-center" style="margin-bottom:3%">
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
               <div class="features-icons-icon d-flex">
-               <a href="api.html" class= "m-auto text-primary">
-                  <i class="icon-screen-desktop m-auto text-primary"></i>
-                   </a>
+                <i class="icon-screen-desktop m-auto text-primary"></i>
               </div>
               <h3>API Fun</h3>
               <p class="lead mb-0">Find out what the weather is doing in your city!</p>
@@ -101,7 +141,7 @@
 
     <!-- Image Showcases -->
     <!--<section class="showcase">
-      <div class="container-fluid p-0">
+      <div class="container-fluid p-0" style="margin-top:3%;">
         <div class="row no-gutters">
 
           <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('weather.jpeg');">
@@ -111,7 +151,7 @@
             
               <h4><i>Your current Weather</i></h4>
                 <p class="lead mb-0"></p>
-            <form id="name-form">
+            <!--<form id="name-form">
                 <label for="name-input">Look up a City</label>
                 <input type="text" id="name-input">
             <br>
@@ -123,23 +163,23 @@
             <div class="humidgoeshere"><p id="humid"></p></div>
             <div class="pressuregoeshere"><p id="pressure"></p></div>
             <div class="gifgoeshere"></div>  
-            
+            </div>
         </div>
-       <!-- <div class="row no-gutters">
+        <!--<div class="row no-gutters">
          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
           <div class="col-lg-6 my-auto showcase-text">
             <h2>Updated For Bootstrap 4</h2>
             <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
           </div>
         </div>
-        <div class="row no-gutters">
+       <!-- <div class="row no-gutters">
           <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>Easy to Use &amp; Customize</h2>
             <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
           </div>
-        </div>
-      </div>
+            </div>
+        </div>      
     </section>-->
 
     <!-- Testimonials -->

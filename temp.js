@@ -17,9 +17,9 @@ d3.select("#find-name").on("click", function(event){
             var pressureurl = response.main.pressure;
             var formatting = d3.format(",");
             d3.select("#city").text(name)
-            d3.select("#temp").text("Temperture: " +formatting(url2)+ " F");
-            d3.select("#humid").text("Humidity: " + urlhumid+"%");
-            d3.select("#pressure").text("Pressure: "+ pressureurl);
+            d3.select("#temp").text(formatting(url2)+ " F");
+            d3.select("#humid").text(urlhumid+"%");
+            d3.select("#pressure").text(pressureurl+" mb");
         
         }
         var gifqueryURL = "https://api.giphy.com/v1/gifs/search?q="+gif_desc+"&api_key=dc6zaTOxFJmzC";
